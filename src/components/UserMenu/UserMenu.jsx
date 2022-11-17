@@ -7,7 +7,7 @@ export const UserMenu = () => {
   // const { user } = useAuth();
 
   return (
-    <div>
+    <div style={{display: 'flex'}}>
       <p>Welcome</p>
       <button type="button">
         Logout

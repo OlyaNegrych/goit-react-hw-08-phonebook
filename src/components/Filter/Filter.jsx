@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
-import { getFilter } from '../../redux/selectors';
+import { setFilter } from 'redux/contacts/filterSlice';
+import { getFilter } from '../../redux/contacts/selectors';
 import { FilterLabel, FilterInput } from '../Filter/Filter.styled';
 
 const Filter = () => {
@@ -9,7 +9,7 @@ const Filter = () => {
 
   const changeFilter = e => {
     dispatch(setFilter(e.target.value));
-  }
+  };
 
   return (
     <FilterLabel>

@@ -1,10 +1,10 @@
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
-import { getContacts } from '../../redux/selectors';
+import { getContacts } from '../../redux/contacts/selectors';
 import { Label, Input, AddBtn } from '../ContactForm/ContactForm.styled';
 
 const validationSchema = Yup.object({
