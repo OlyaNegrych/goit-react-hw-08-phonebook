@@ -4,8 +4,8 @@ import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
-import { getContacts } from '../../redux/contacts/selectors';
-import { Label, Input, AddBtn } from '../ContactForm/ContactForm.styled';
+import { selectContacts } from '../../../redux/contacts/selectors';
+import { Label, Input, AddBtn } from './ContactForm.styled';
 
 const validationSchema = Yup.object({
   name: Yup.string().required(),
@@ -19,7 +19,7 @@ const initialValues = {
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = ({ name, number }, { resetForm }) => {
     const checkNameInList = contacts.some(
