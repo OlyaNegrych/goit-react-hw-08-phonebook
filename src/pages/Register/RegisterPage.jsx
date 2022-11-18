@@ -1,9 +1,10 @@
 import { RegisterForm } from 'components/Auth/RegisterForm/RegisterForm';
+import Section from '../../components/Section/Section';
 
 export default function Register() {
   return (
-    <div>
+    <Section>
       <RegisterForm />
-    </div>
+    </Section>
   );
 }

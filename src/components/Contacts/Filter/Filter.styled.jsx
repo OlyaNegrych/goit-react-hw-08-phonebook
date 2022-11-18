@@ -6,9 +6,13 @@ export const FilterLabel = styled.label`
 `;
 
 export const FilterInput = styled.input`
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  font-size: 24px;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 5px;
+  padding-right: 5px;
 
   :focus-within {
     border: 2px solid #40c4ff;

@@ -1,12 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 import {
   fetchContacts,
   addContact,
   deleteContact,
   updateContact,
-} from './operations';
+} from '../contacts/operations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -59,22 +57,12 @@ const contactsSlice = createSlice({
       const index = state.items.findIndex(
         item => item.id === action.payload.id
       );
-      state.items.splice(index, 1, action.payload);
+      state.items.splice(index, 1, { ...action.payload });
+      //  state.items.splice(index, 1, action.payload);
     },
     [updateContact.rejected]: handleRejected,
   },
 });
 
 export const contactsReducer = contactsSlice.reducer;
-
-const persistConfig = {
-  key: 'contacts',
-  storage,
-  whitelist: ['token'],
-};
-
-export const persistedContactsReduser = persistReducer(
-  persistConfig,
-  contactsReducer
-);
 

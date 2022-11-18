@@ -1,16 +1,16 @@
 import React from "react";
 // import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { StyledLink } from '../Navigation/Navigation.styled';
 
 const Navigation = () => {
     // const isLoggedIn = useSelector(state => state.isLoggedIn);
 
     return (
       <nav>
-        <NavLink to="/">Home</NavLink>
-        {/* {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>} */}
+        <StyledLink to="/">Home</StyledLink>
+        {/* {isLoggedIn && <StyledLink to="/contacts">Contacts</StyledLink>} */}
         
-            <NavLink to="/contacts">Contacts</NavLink>
+            <StyledLink to="/contacts">Contacts</StyledLink>
       </nav>
     );
 }
