@@ -6,9 +6,7 @@ import { LayoutWrapper } from '../Layout/Layout.styled';
 
 export const Layout = () => {
   return (
-    <LayoutWrapper
-      style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}
-    >
+    <LayoutWrapper>
       <AppBar />
       <Suspense
         fallback={

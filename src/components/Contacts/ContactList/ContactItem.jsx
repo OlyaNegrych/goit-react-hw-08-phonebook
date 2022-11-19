@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { deleteContact, updateContact } from 'redux/contacts/operations';
-import { EditBtn, DeleteBtn } from './ContactList.styled';
+import { EditBtn, DeleteBtn, ContactText } from './ContactList.styled';
 import { Contact } from './ContactList.styled';
 
 const ContactItem = ({id, name, number}) => {
@@ -58,22 +58,23 @@ const ContactItem = ({id, name, number}) => {
           />
         </>
       ) : (
-        <p>
+        <ContactText>
           {name}: {number}
-        </p>
+        </ContactText>
       )}
 
-      <EditBtn
-        type="button"
-        onClick={() => handleUpdateContact({ id, name, number })}
-      >
-        {isUpdated ? 'Save' : 'Edit'}
-      </EditBtn>
+      <div>
+        <EditBtn
+          type="button"
+          onClick={() => handleUpdateContact({ id, name, number })}
+        >
+          {isUpdated ? 'Save' : 'Edit'}
+        </EditBtn>
 
-      <DeleteBtn type="button" onClick={() => handleDeleteContact(id)}>
-        Delete
-      </DeleteBtn>
-
+        <DeleteBtn type="button" onClick={() => handleDeleteContact(id)}>
+          Delete
+        </DeleteBtn>
+      </div>
     </Contact>
   );
 };

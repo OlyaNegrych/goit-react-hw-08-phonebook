@@ -9,7 +9,7 @@ font-weight: 500;
 export const Input = styled(Field)`
   display: inline-block;
   font: inherit;
-  font-size: 18px;
+  font-size: 22px;
   border-radius: 5px;
   outline: none;
   padding-left: 5px;
@@ -24,8 +24,8 @@ export const Input = styled(Field)`
 
 export const AddBtn = styled.button`
   display: inline-block;
-  width: 150px;
-  height: 48px;
+  width: 120px;
+  height: 38px;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid black;

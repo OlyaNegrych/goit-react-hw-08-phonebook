@@ -6,7 +6,7 @@ const ContactList = () => {
   const visibleContacts = useSelector(selectVisibleContacts);
  
   return (
-    <ul>
+    <ul style={{padding: 0}}>
       {visibleContacts.map(({ id, name, number }) => (
         <ContactItem key={id} name={name} number={number} id={id} />
       ))}

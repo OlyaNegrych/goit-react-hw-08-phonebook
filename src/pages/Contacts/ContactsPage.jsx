@@ -6,6 +6,7 @@ import ContactList from 'components/Contacts/ContactList/ContactList';
 import Section from '../../components/Section/Section';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { selectError, selectIsLoading } from '../../redux/contacts/selectors';
+import { StyledConactPage } from './ContactsPage.styled';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <Section title="Phonebook">
+    <StyledConactPage>
+      <Section title="Add new contact">
         <ContactForm />
       </Section>
 
@@ -28,7 +29,7 @@ const ContactsPage = () => {
         {isLoading && !error && <b>Request in progress...</b>}
         <ContactList />
       </Section>
-    </div>
+    </StyledConactPage>
   );
 };
 
