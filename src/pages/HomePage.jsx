@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>
-        Contact manager welcome page{' '}
+        Wellcome to Contact Manager{' '}
         <span role="img" aria-label="Greeting icon">
           💁‍♀️
         </span>

@@ -1,16 +1,17 @@
 import React from "react";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { StyledLink } from '../Navigation/Navigation.styled';
 
 const Navigation = () => {
-    // const isLoggedIn = useSelector(state => state.isLoggedIn);
+    const isLoggedIn = useSelector(selectIsLoggedIn);
 
     return (
       <nav>
-        <StyledLink to="/">Home</StyledLink>
-        {/* {isLoggedIn && <StyledLink to="/contacts">Contacts</StyledLink>} */}
-        
-            <StyledLink to="/contacts">Contacts</StyledLink>
+        <StyledLink to="/" end>
+          Home
+        </StyledLink>
+        {isLoggedIn && <StyledLink to="/contacts">Contacts</StyledLink>}
       </nav>
     );
 }

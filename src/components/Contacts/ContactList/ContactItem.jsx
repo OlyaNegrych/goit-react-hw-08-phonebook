@@ -73,6 +73,7 @@ const ContactItem = ({id, name, number}) => {
       <DeleteBtn type="button" onClick={() => handleDeleteContact(id)}>
         Delete
       </DeleteBtn>
+
     </Contact>
   );
 };
